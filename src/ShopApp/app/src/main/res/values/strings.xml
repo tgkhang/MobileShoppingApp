@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShopApp</string>
+    <string name="facebook_app_id">1026106046105112</string>
+    <string name="fb_login_protocol_scheme">fb1026106046105112</string>
+    <string name="facebook_client_token">0971dee361bc6d40c7463355578d7f9e</string>
+
+    <!-- ProfileScreen -->
+    <string name="my_profile">My Profile</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="checking_verification_status">Checking verification status...</string>
+    <string name="email_verified">Email verified</string>
+    <string name="email_not_verified">Email not verified</string>
+    <string name="send_verification_email">Send Verification Email</string>
+    <string name="sending_verification_email">Sending verification email...</string>
+    <string name="verification_status_unknown">Verification status unknown</string>
+    <string name="refresh_verification_status">Refresh Verification Status</string>
+    <string name="account_information">Account Information</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="settings">Settings</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="log_out">Log Out</string>
+    <string name="could_not_load_profile_data">Could not load profile data</string>
+    <string name="retry">Retry</string>
+    <string name="change_language">Change Language</string>
+    <string name="select_language">Select Language</string>
+    <string name="english">English</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="verification_email_sent">Verification email sent. Please check your inbox.</string>
+
+    <!-- OrderScreen -->
+    <string name="my_orders">My Orders</string>
+    <string name="pending">Pending</string>
+    <string name="shipping">Shipping</string>
+    <string name="delivered">Delivered</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="you_have_no_orders_yet">You have no orders yet.</string>
+    <string name="order_prefix">Order #</string>
+    <string name="placed_on">Placed on:</string>
+    <string name="total">Total:</string>
+    <string name="quantity_prefix">Qty:</string>
+    <string name="delivery_information">Delivery Information</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="are_you_sure_cancel_order">Are you sure you want to cancel this order?</string>
+    <string name="mark_as_received">Mark as Received</string>
+    <string name="are_you_sure_received_order">Are you sure you have received this order?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="order_cancelled_successfully">Order cancelled successfully!</string>
+    <string name="cannot_cancel_order">Cannot cancel this order.</string>
+    <string name="order_marked_as_received">Order marked as received!</string>
+    <string name="cannot_mark_as_received">Cannot mark this order as received.</string>
+
+    <!-- CartScreen -->
+    <string name="my_cart">My Cart</string>
+    <string name="items_count">%d item(s)</string>
+    <string name="checkout">CHECKOUT</string>
+    <string name="your_cart_is_empty">Your cart is empty</string>
+    <string name="browse_products">BROWSE PRODUCTS</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="items_total">Items Total</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="free">FREE</string>
+    <string name="total_amount">Total Amount</string>
+
+    <!-- UserHomeScreen -->
+    <string name="app_title">EShop</string>
+    <string name="search_product_placeholder">Search Product..</string>
+    <string name="featured_deals">Featured Deals</string>
+    <string name="off_accessories">50% OFF Accessories</string>
+    <string name="new_arrivals">New Arrivals</string>
+    <string name="holiday_specials">Holiday Specials</string>
+    <string name="categories">Categories</string>
+    <string name="all">All</string>
+    <string name="popular_products">Popular Products</string>
+    <string name="no_more_products">No more products to display</string>
+    <string name="no_products_found_in_category">No products found in %s</string>
+    <string name="no_products_available">No products available</string>
+    <string name="refresh">Refresh</string>
+    <string name="profile">Profile</string>
+    <string name="category_audio">audio</string>
+    <string name="category_gaming">gaming</string>
+    <string name="category_mobile">mobile</string>
+    <string name="category_tv">tv</string>
+    <string name="category_laptop">laptop</string>
+    <string name="category_tablet">tablet</string>
+    <string name="category_headphone">headphone</string>
+    <string name="category_accessories">accessories</string>
+</resources>

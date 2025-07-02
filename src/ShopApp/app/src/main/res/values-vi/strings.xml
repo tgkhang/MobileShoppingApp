@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShopApp</string>
+    <string name="facebook_app_id">1026106046105112</string>
+    <string name="fb_login_protocol_scheme">fb1026106046105112</string>
+    <string name="facebook_client_token">0971dee361bc6d40c7463355578d7f9e</string>
+
+    <!-- ProfileScreen -->
+    <string name="my_profile">Hồ sơ của tôi</string>
+    <string name="email_verification">Xác minh email</string>
+    <string name="checking_verification_status">Đang kiểm tra trạng thái xác minh...</string>
+    <string name="email_verified">Email đã được xác minh</string>
+    <string name="email_not_verified">Email chưa được xác minh</string>
+    <string name="send_verification_email">Gửi email xác minh</string>
+    <string name="sending_verification_email">Đang gửi email xác minh...</string>
+    <string name="verification_status_unknown">Trạng thái xác minh không xác định</string>
+    <string name="refresh_verification_status">Làm mới trạng thái xác minh</string>
+    <string name="account_information">Thông tin tài khoản</string>
+    <string name="email">Email</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="address">Địa chỉ</string>
+    <string name="settings">Cài đặt</string>
+    <string name="edit_profile">Chỉnh sửa hồ sơ</string>
+    <string name="log_out">Đăng xuất</string>
+    <string name="could_not_load_profile_data">Không thể tải dữ liệu hồ sơ</string>
+    <string name="retry">Thử lại</string>
+    <string name="change_language">Thay đổi ngôn ngữ</string>
+    <string name="select_language">Chọn ngôn ngữ</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="verification_email_sent">Email xác minh đã được gửi. Vui lòng kiểm tra hộp thư của bạn.</string>
+
+    <!-- OrderScreen -->
+    <string name="my_orders">Đơn hàng của tôi</string>
+    <string name="pending">Đang chờ xử lý</string>
+    <string name="shipping">Đang giao hàng</string>
+    <string name="delivered">Đã giao hàng</string>
+    <string name="cancelled">Đã hủy</string>
+    <string name="you_have_no_orders_yet">Bạn chưa có đơn hàng nào.</string>
+    <string name="order_prefix">Đơn hàng #</string>
+    <string name="placed_on">Đặt vào:</string>
+    <string name="total">Tổng cộng:</string>
+    <string name="quantity_prefix">Số lượng:</string>
+    <string name="delivery_information">Thông tin giao hàng</string>
+    <string name="cancel_order">Hủy đơn hàng</string>
+    <string name="are_you_sure_cancel_order">Bạn có chắc chắn muốn hủy đơn hàng này không?</string>
+    <string name="mark_as_received">Đã nhận hàng</string>
+    <string name="are_you_sure_received_order">Bạn có chắc chắn đã nhận được đơn hàng này không?</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="order_cancelled_successfully">Đơn hàng đã được hủy thành công!</string>
+    <string name="cannot_cancel_order">Không thể hủy đơn hàng này.</string>
+    <string name="order_marked_as_received">Đơn hàng đã được đánh dấu là đã nhận!</string>
+    <string name="cannot_mark_as_received">Không thể đánh dấu đơn hàng này là đã nhận.</string>
+
+    <!-- CartScreen -->
+    <string name="my_cart">Giỏ hàng của tôi</string>
+    <string name="items_count">%d mặt hàng</string>
+    <string name="checkout">THANH TOÁN</string>
+    <string name="your_cart_is_empty">Giỏ hàng của bạn đang trống</string>
+    <string name="browse_products">DUYỆT SẢN PHẨM</string>
+    <string name="apply_coupon">Áp dụng mã giảm giá</string>
+    <string name="order_summary">Tóm tắt đơn hàng</string>
+    <string name="items_total">Tổng giá trị mặt hàng</string>
+    <string name="delivery_charges">Phí giao hàng</string>
+    <string name="free">MIỄN PHÍ</string>
+    <string name="total_amount">Tổng số tiền</string>
+
+    <!-- UserHomeScreen -->
+    <string name="app_title">Cửa hàng điện tử</string>
+    <string name="search_product_placeholder">Tìm kiếm sản phẩm..</string>
+    <string name="featured_deals">Ưu đãi nổi bật</string>
+    <string name="off_accessories">Giảm 50% phụ kiện</string>
+    <string name="new_arrivals">Hàng mới về</string>
+    <string name="holiday_specials">Ưu đãi dịp lễ</string>
+    <string name="categories">Danh mục</string>
+    <string name="all">Tất cả</string>
+    <string name="popular_products">Sản phẩm nổi bật</string>
+    <string name="no_more_products">Không còn sản phẩm để hiển thị</string>
+    <string name="no_products_found_in_category">Không tìm thấy sản phẩm trong danh mục %s</string>
+    <string name="no_products_available">Không có sản phẩm nào</string>
+    <string name="refresh">Làm mới</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="category_audio">âm thanh</string>
+    <string name="category_gaming">trò chơi</string>
+    <string name="category_mobile">điện thoại</string>
+    <string name="category_tv">tivi</string>
+    <string name="category_laptop">máy tính xách tay</string>
+    <string name="category_tablet">máy tính bảng</string>
+    <string name="category_headphone">tai nghe</string>
+    <string name="category_accessories">phụ kiện</string>
+</resources>

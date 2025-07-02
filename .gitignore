@@ -25,3 +25,94 @@ replay_pid*
 
 # Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+
+# Android APK files (especially large ones)
+*.apk
+*.aab
+AppiumTest/apps/
+AppiumTest/apps/shop.apk
+
+# Android build files
+build/
+*/build/
+**/build/
+.gradle/
+local.properties
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+
+# Android Studio
+*.iml
+.idea/
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Android keystore files
+*.jks
+*.keystore
+
+# Google Services (Firebase)
+google-services.json
+
+# Proguard
+proguard/
+
+# Android NDK
+obj/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle Wrapper (keep the jar but ignore other wrapper files)
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+*/build/
+
+# IntelliJ IDEA
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
