@@ -1,0 +1,66 @@
+
+✅ Step 1: Set ANDROID_HOME
+Open Start Menu → Search “Environment Variables” → Click “Edit the system environment variables.”
+→ Click “Environment Variables…”
+
+Under System variables, click New…
+
+Variable name: ANDROID_HOME
+
+Variable value:
+
+pgsql
+Edit
+C:\Users\admin\AppData\Local\Android\Sdk
+✅ Step 2: Add SDK Tools to PATH
+Still under System variables, find and edit the Path variable.
+
+Click New and add these three paths (one per line):
+
+perl
+Copy
+Edit
+%ANDROID_HOME%\tools
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\emulator
+
+
+npm uninstall -g appium-doctor
+
+
+https://github.com/appium/appium-inspector/releases
+
+
+
+setup and install in visual studio
+dowload java
+- add javahome to variable
+- install appium
+- isntall ui automator 2 driver
+- appium doctor(Optional)
+- apium instpector
+
+
+- maven? mavenhome vảiable (MAVEN HOME /bin)https://youtu.be/5wGn-jFT3Bo?si=Lq8AdaixTXMn9Z_p
+https://mvnrepository.com/artifact/org.testng/testng
+
+
+maven
+appium
+appium inspector
+
+
+Appium Java Client: 8.6.0 (instead of 9.x versions)
+Selenium: 4.15.0 (stable version)
+TestNG: 7.8.0
+Java: 17 (LTS version)
+
+
+# Check dependency tree
+mvn dependency:tree
+
+# Check for version conflicts
+mvn dependency:analyze-duplicate
+
+# Validate dependencies
+mvn dependency:resolve

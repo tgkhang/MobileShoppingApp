@@ -1,0 +1,38 @@
+# Setting up Appium and Inspector for Testing
+
+## Step 1: Configure ANDROID_HOME
+1. Open Start Menu → Search "Environment Variables" → Click "Edit the system environment variables."
+2. Click "Environment Variables..."
+3. Under System variables, click "New..."
+   - **Variable name:** ANDROID_HOME
+   - **Variable value:** `C:\Users\admin\AppData\Local\Android\Sdk`
+
+## Step 2: Add SDK Tools to PATH
+1. Under System variables, find and edit the "Path" variable.
+2. Click "New" and add the following paths:
+   - `%ANDROID_HOME%\tools`
+   - `%ANDROID_HOME%\platform-tools`
+   - `%ANDROID_HOME%\emulator`
+
+## Step 3: Install Required Tools
+1. Download and install Java (version 17 LTS).
+   - Add `JAVA_HOME` to system variables.
+2. Install Appium.
+3. Install UI Automator 2 Driver.
+4. Optionally install Appium Doctor.
+5. Download Appium Inspector from [Appium Inspector Releases](https://github.com/appium/appium-inspector/releases).
+
+## Step 4: Set Up Maven
+1. Install Maven.
+2. Add `MAVEN_HOME` to system variables and include `/bin` in the path.
+3. Validate Maven setup using:
+   - `mvn dependency:tree`
+   - `mvn dependency:analyze-duplicate`
+   - `mvn dependency:resolve`
+
+## Recommended Versions
+- **Appium Java Client:** 8.6.0
+- **Selenium:** 4.15.0
+- **TestNG:** 7.8.0
+
+You are now ready to start your testing project!
