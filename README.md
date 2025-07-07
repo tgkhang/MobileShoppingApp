@@ -8,6 +8,13 @@ This project consists of two main components:
 - **ShopApp**: An Android mobile shopping application built with Kotlin and Jetpack Compose
 - **AppiumTest**: Automated testing suite using Appium for mobile app testing
 
+## 🔗 Links
+
+- **Original Gitlab Project**: https://gitlab.com/tgkhang/shop-android
+- **Appium Documentation**: https://appium.io/
+- **Android Development**: https://developer.android.com/
+---
+
 ## 🏗️ Project Structure
 
 ```
@@ -186,17 +193,5 @@ The automated tests cover:
 4. Add tests for new functionality
 5. Ensure all tests pass
 6. Submit a pull request
-
-## 📝 License
-
-This project is for educational purposes. Please refer to the original project for licensing information.
-
-## 🔗 Links
-
-- **Original Project**: https://gitlab.com/tgkhang/shop-android
-- **Appium Documentation**: https://appium.io/
-- **Android Development**: https://developer.android.com/
-
----
 
 *This project demonstrates mobile app development with automated testing practices using modern Android development tools and testing frameworks.*
