@@ -1,0 +1,9 @@
+email,password,expectedResult,description
+tgkhang22@clc.fitus.edu.vn,123456,success,Valid login credentials
+testuser@example.com,wrongpass,failure,Invalid password
+invalid@email,123456,failure,Invalid email format
+validuser@test.com,pass123,success,Another valid user
+admin@admin.com,admin123,success,Admin user login
+user@domain.co,short,failure,Password too short
+,123456,failure,Empty email field
+testuser@example.com,,failure,Empty password field

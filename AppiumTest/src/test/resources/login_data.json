@@ -1,0 +1,52 @@
+{
+  "loginTestData": [
+    {
+      "email": "tgkhang22@clc.fitus.edu.vn",
+      "password": "123456",
+      "expectedResult": "success",
+      "description": "Valid login credentials"
+    },
+    {
+      "email": "testuser@example.com",
+      "password": "wrongpass",
+      "expectedResult": "failure",
+      "description": "Invalid password"
+    },
+    {
+      "email": "invalid@email",
+      "password": "123456",
+      "expectedResult": "failure",
+      "description": "Invalid email format"
+    },
+    {
+      "email": "validuser@test.com",
+      "password": "pass123",
+      "expectedResult": "success",
+      "description": "Another valid user"
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "expectedResult": "success",
+      "description": "Admin user login"
+    },
+    {
+      "email": "user@domain.co",
+      "password": "short",
+      "expectedResult": "failure",
+      "description": "Password too short"
+    },
+    {
+      "email": "",
+      "password": "123456",
+      "expectedResult": "failure",
+      "description": "Empty email field"
+    },
+    {
+      "email": "testuser@example.com",
+      "password": "",
+      "expectedResult": "failure",
+      "description": "Empty password field"
+    }
+  ]
+}
