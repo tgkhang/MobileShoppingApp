@@ -1,0 +1,3 @@
+Timestamp,Test Description,Email,Password,Expected Result,Actual Result,Bug Description
+2025-07-25 23:21:48,Another valid user,validuser@test.com,pass123,success,Login failed,"Expected successful login for valid credentials but login failed. Email: validuser@test.com, Password: pass123"
+2025-07-25 23:22:22,Admin user login,admin@admin.com,admin123,success,Login failed,"Expected successful login for valid credentials but login failed. Email: admin@admin.com, Password: admin123"
