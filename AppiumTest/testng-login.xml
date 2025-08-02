@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LoginBugReportTests" parallel="false" thread-count="1">
+    <test name="LoginTest">
+        <classes>
+            <class name="org.example.eshop.TestLogin"/>
+        </classes>
+    </test>
+</suite>

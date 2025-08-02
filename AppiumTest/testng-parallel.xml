@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ParallelProductTests" parallel="methods" thread-count="2">
+    <test name="ProductClickTest">
+        <classes>
+            <class name="org.example.eshop.TestClickAProduct"/>
+        </classes>
+    </test>
+</suite>

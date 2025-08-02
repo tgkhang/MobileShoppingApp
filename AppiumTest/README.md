@@ -129,3 +129,12 @@ This is part of a larger repository structure. When making changes:
 ## Contact
 
 For questions or issues related to this testing project, please refer to the main repository documentation or contact the development team.
+
+1. Run ONLY Parallel Product Test:
+   mvn test -Dtest=TestClickAProduct
+
+2. Run ONLY Login Bug Report Test:
+   mvn test -Dtest=TestLogin
+
+3. Run Both Tests:
+   mvn test

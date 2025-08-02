@@ -3,10 +3,11 @@ package org.example.eshop;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.example.utils.CSVDataReader;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.example.utils.JSONDataReader;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.Assert.*;
 
 public class TestLogin {
     public AndroidDriver driver;
@@ -31,33 +32,30 @@ public class TestLogin {
     private static final String BUG_REPORT_FILE = "src/test/resources/bug_reports.csv";
     private static boolean headerWritten = false;
 
-    @BeforeEach
+    @BeforeMethod
     public void setup() throws MalformedURLException {
         String appiumServerUrl = "http://127.0.0.1:4723";
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
         caps.setCapability("appium:automationName", "uiautomator2");
         caps.setCapability("appium:app", System.getProperty("user.dir") + "/apps/shop.apk");
-        // Reset app before each test
-        caps.setCapability("appium:noReset", false);
-        caps.setCapability("appium:fullReset", true);
+        caps.setCapability("appium:appWaitForLaunch", true);
         
         driver = new AndroidDriver(new URL(appiumServerUrl), caps);
-        // Initialize WebDriverWait with 15 seconds timeout for slower loading
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        
-        // Initialize bug report file with header if not already done
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    
         initializeBugReportFile();
     }
 
-    // Method source for parameterized test
-    static Stream<Object[]> loginDataProvider() {
-        Object[][] data = CSVDataReader.readLoginData("login_data.csv");
-        return Stream.of(data);
+    // DataProvider for TestNG parameterized test
+    @DataProvider(name = "loginData")
+    public Object[][] loginDataProvider() {
+        //Object[][] data = CSVDataReader.readLoginData("login_data.csv");
+        Object[][] data = JSONDataReader.readLoginData("login_data.json");
+        return data;
     }
 
-    @ParameterizedTest
-    @MethodSource("loginDataProvider")
+    @Test(dataProvider = "loginData")
     public void testLoginWithMultipleData(String email, String password, String expectedResult, String description) {
         System.out.println("Testing: " + description);
         System.out.println("Email: " + email + ", Password: " + password + ", Expected: " + expectedResult);
@@ -82,7 +80,6 @@ public class TestLogin {
                 emailField.sendKeys(email);
             }
 
-            // Wait for and enter password
             WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(
                     AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.EditText\").instance(1)")
             ));
@@ -91,18 +88,28 @@ public class TestLogin {
                 passwordField.sendKeys(password);
             }
 
-            // Wait for and click 'Sign In' button
             WebElement signInButton = wait.until(ExpectedConditions.elementToBeClickable(
                     AppiumBy.androidUIAutomator("new UiSelector().textContains(\"Sign In\")")
             ));
             signInButton.click();
 
             // Wait for response
-            Thread.sleep(3000);
-            
-            System.out.println("Login action completed, checking results...");
+            Thread.sleep(4000); 
+            try {
+                List<WebElement> buttons = driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.Button\")"));
+                System.out.println("Found " + buttons.size() + " buttons on screen");
+                if (!buttons.isEmpty()) {
+                    buttons.get(buttons.size() - 1).click();
+                }
+            } catch (Exception e5) {
+                System.out.println("FAILED: last button method - " + e5.getMessage());
+            }
 
-            // Verify the result based on expected outcome
+     
+            Thread.sleep(1000); // Wait after clicking
+                    
+
+            System.out.println("Login action completed, checking results...");
             if ("success".equals(expectedResult)) {
                 boolean loginSuccessful = isLoginSuccessful();
                 if (!loginSuccessful) {
@@ -142,8 +149,6 @@ public class TestLogin {
             fail("Test interrupted: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("✗ Test failed with exception: " + e.getMessage());
-            
-            // For demonstration, we'll be lenient with exceptions for invalid data
             if ("failure".equals(expectedResult)) {
                 actualResult = "Exception occurred as expected for invalid data";
                 System.out.println("✓ Exception occurred as expected for invalid data");
@@ -199,11 +204,6 @@ public class TestLogin {
                 System.out.println("Error searching for user elements: " + e.getMessage());
             }
             
-            System.out.println("Sign In buttons found: " + signInButtons.size());
-            System.out.println("Home elements found: " + homeElements.size());
-            System.out.println("Email fields found: " + emailFields.size());
-            System.out.println("User elements found: " + userElements.size());
-            
             // Success indicators
             boolean noSignInButton = signInButtons.isEmpty();
             boolean hasHomeElements = !homeElements.isEmpty();
@@ -252,7 +252,6 @@ public class TestLogin {
             System.out.println("Error messages found: " + errorMessages.size());
             System.out.println("Sign In buttons found: " + signInButtons.size());
             
-            // Login failed if we still see login elements or error messages
             boolean hasLoginElements = !emailFields.isEmpty() && !signInButtons.isEmpty();
             boolean hasErrorMessages = !errorMessages.isEmpty();
             
@@ -295,7 +294,7 @@ public class TestLogin {
                 timestamp, escapedDescription, escapedEmail, escapedPassword, 
                 escapedExpected, escapedActual, escapedBugDesc));
                 
-            System.out.println("🐛 Bug reported: " + bugDescription);
+            System.out.println("Bug reported: " + bugDescription);
             
         } catch (IOException e) {
             System.err.println("Failed to write bug report: " + e.getMessage());
@@ -313,7 +312,7 @@ public class TestLogin {
         return value;
     }
 
-    @AfterEach
+    @AfterMethod
     public void close() {
         if (driver != null) {
             driver.quit();
